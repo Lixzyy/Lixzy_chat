@@ -26,7 +26,7 @@ Assurez-vous que le chat par défaut d'ESX est bien désactivé dans votre serve
 
 Puis ajouter la ligne suivante pour demarrer le chat:
 
-    -- ensure lixzy_chat
+     ensure lixzy_chat
 
 # ⚙️ Configuration et Utilisation
 La force de ce chat réside dans sa capacité à interagir avec vos autres scripts.
