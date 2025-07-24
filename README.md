@@ -25,7 +25,8 @@ Téléchargez ou clonez cette ressource dans votre dossier resources.
 Assurez-vous que le chat par défaut d'ESX est bien désactivé dans votre server.cfg :
 
 Puis ajouter la ligne suivante pour demarrer le chat:
-ensure mon_chat
+
+    -- ensure lixzy_chat
 
 # ⚙️ Configuration et Utilisation
 La force de ce chat réside dans sa capacité à interagir avec vos autres scripts.
