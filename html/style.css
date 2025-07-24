@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+
+#chat-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40%;
+    max-width: 700px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#chat-messages {
+    overflow-y: auto;
+    padding-right: 10px;
+    flex-grow: 1;
+    word-wrap: break-word;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+}
+
+#chat-messages::-webkit-scrollbar {
+    width: 4px;
+}
+
+#chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#chat-messages::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.message {
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    background-color: rgba(10, 10, 20, 0.7);
+    border-radius: 5px;
+    line-height: 1.5;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#chat-input-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#chat-input {
+    width: 100%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 14px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+#chat-input:focus {
+    outline: none;
+    background-color: rgba(10, 10, 10, 0.95);
+}
+
+#chat-suggestions-list {
+    background-color: rgba(10, 10, 20, 0.85);
+    border-radius: 5px 5px 0 0;
+    max-height: 150px;
+    overflow-y: auto;
+    margin-bottom: 2px;
+}
+
+#chat-suggestions-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+#chat-suggestions-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.suggestion-item {
+    padding: 8px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover {
+    background-color: rgba(30, 144, 255, 0.5);
+}
+
+.suggestion-item .cmd-name {
+    font-weight: 700;
+    color: white;
+    font-size: 14px;
+}
+
+.suggestion-item .cmd-help {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.notification {
+    border-left: 4px solid #fff;
+    padding-left: 10px !important;
+    font-style: italic;
+    background-color: rgba(50, 50, 50, 0.7) !important;
+}
+
+.notification i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.notification.success {
+    border-left-color: #4CAF50;
+}
+.notification.success i {
+    color: #4CAF50;
+}
+
+.notification.error {
+    border-left-color: #f44336;
+}
+.notification.error i {
+    color: #f44336;
+}
+
+.notification.info {
+    border-left-color: #2196F3;
+}
+.notification.info i {
+    color: #2196F3;
+}
